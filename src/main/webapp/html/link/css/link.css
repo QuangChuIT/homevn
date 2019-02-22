@@ -1,0 +1,120 @@
+.list-cate {
+    display: block;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.list-cate li {
+    padding: 0;
+    line-height: 25px;
+}
+
+.frm-css {
+    padding-top: 70px !important;
+}
+.form-add-css {
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.check-css {
+    padding-top: 8px !important;
+}
+
+#table-prop tbody tr td {
+    vertical-align: middle !important;
+}
+#table-prop tr td:first-child{
+    display: none;
+}
+.lst-link-title {
+    width: 100%;
+    overflow: hidden;
+    text-align: justify;
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 10px;
+}
+
+.float-left {
+    width: 90%;
+    float: left;
+    margin-right: 4px;
+}
+
+.float-right {
+    width: 9%;
+    float: left;
+}
+.float-right #showModalAddNew{
+    border-radius: 100px;
+}
+.block-cate{
+    height: auto;
+    padding-bottom: 130px;
+}
+#categoryCrawl_tagsinput {
+    width: 100% !important;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container input[type=text] {
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+}
+
+.search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-right: 11px;
+    background: #ddd;
+    font-size: 17px;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.link-action {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #CCCCCC;
+    height: 50px;
+}
+
+#table-links{
+    width: 100%;
+}
+
+#table-links tbody tr td a{
+    color: #2c4584;
+}
+
+#table-links tbody tr td a:hover{
+    color: #b90e01;
+}
+/*form edit link*/
+.css-mth{
+    display: none;
+}
+.chk-extra{
+    display: none;
+}
+
+.list-tag{
+    display: inline-block;
+    list-style: none;
+}
+
+.list-tag li {
+    float: left;
+    padding: 0 1px;
+}

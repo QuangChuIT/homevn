@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="adminLayout" template="/html/share/layout.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="header" value="/html/share/header.jsp"/>
+        <put-attribute name="menu" value="/html/share/menu.jsp"/>
+        <put-attribute name="body" value="/html/share/body.jsp"/>
+        <put-attribute name="footer" value="/html/share/footer.jsp"/>
+        <put-list-attribute name="javascripts">
+            <add-attribute value="/static/js/jquery.min.js"/>
+            <add-attribute value="/static/js/jquery.tagsinput.js"/>
+            <add-attribute value="/static/js/bootstrap.min.js"/>
+            <add-attribute value="/static/js/nprogress.js"/>
+            <add-attribute value="/static/js/bootstrap-progressbar.min.js"/>
+            <add-attribute value="/static/js/icheck.min.js"/>
+            <add-attribute value="/static/js/date.js"/>
+            <add-attribute value="/static/js/moment.min.js"/>
+            <add-attribute value="/static/js/fastclick.js"/>
+            <add-attribute value="/static/js/daterangepicker.js"/>
+            <add-attribute value="/static/js/custom.min.js"/>
+            <add-attribute value="/static/js/validator.js"/>
+            <add-attribute value="/static/js/main.js"/>
+        </put-list-attribute>
+        <put-list-attribute name="stylesheets">
+            <add-attribute value="/static/css/bootstrap.min.css"/>
+            <add-attribute value="/static/css/font-awesome.min.css"/>
+            <add-attribute value="/static/css/nprogress.css"/>
+            <add-attribute value="/static/css/green.css"/>
+            <add-attribute value="/static/css/bootstrap-progressbar-3.3.4.min.css"/>
+            <add-attribute value="/static/css/jqvmap.min.css"/>
+            <add-attribute value="/static/css/daterangepicker.css"/>
+            <add-attribute value="/static/css/custom.min.css"/>
+            <add-attribute value="/static/css/jquery.tagsinput.css"/>
+            <add-attribute value="/static/css/main.css"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="clientLayout" template="/html/share/client/layout.jsp">
+
+    </definition>
+    <definition name="homePage" extends="adminLayout">
+        <put-attribute name="body" value="/html/home/index.jsp"/>
+        <put-attribute name="title" expression="Trang chủ"/>
+    </definition>
+    <!--Category Admin-->
+    <definition name="category" extends="adminLayout">
+        <put-attribute name="body" value="/html/category/categoryList.jsp"/>
+        <put-attribute name="title" value="Quản trị chuyên mục"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/html/category/css/category.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/html/category/js/category.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="addCategory" extends="adminLayout">
+        <put-attribute name="body" value="/html/category/create.jsp"/>
+        <put-attribute name="title" value="Thêm mới chuyên mục"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/html/category/css/category.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/html/category/js/category.js"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="detailCate" extends="adminLayout">
+        <put-attribute name="title" expression="${category.name}"/>
+        <put-attribute name="body" value="/html/category/categoryDetail.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/html/category/css/category.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/html/category/js/category.js"/>
+        </put-list-attribute>
+    </definition>
+    <!--link admin-->
+    <definition name="linkList" extends="adminLayout">
+        <put-attribute name="title" value="Quản trị liên kết lấy tin"/>
+        <put-attribute name="body" value="/html/link/linkList.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/html/link/css/link.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/html/link/js/link.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="addLink" extends="adminLayout">
+        <put-attribute name="title" value="Quản trị liên kết - Thêm liên kết"/>
+        <put-attribute name="body" value="/html/link/createLink.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/html/link/css/link.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/html/link/js/link.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="linkDetail" extends="adminLayout">
+        <put-attribute name="title" value="Quản trị liên kết - Chi tiết link"/>
+        <put-attribute name="body" value="/html/link/linkDetail.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/html/link/css/link.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/html/link/js/link.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <!--Newspaper admin-->
+    <definition name="newspaperList" extends="adminLayout">
+        <put-attribute name="title" value="Quản trị báo - Danh sách báo"/>
+        <put-attribute name="body" value="/html/newspaper/newspaperList.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/html/newspaper/css/newspaper.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/html/newspaper/js/newspaper.js"/>
+        </put-list-attribute>
+    </definition>
+    <!--Error-->
+    <definition name="error" template="/html/error.html"/>
+
+    <definition name="login" template="/html/login.jsp">
+        <put-attribute name="title" value="Đăng nhập"/>
+    </definition>
+</tiles-definitions>

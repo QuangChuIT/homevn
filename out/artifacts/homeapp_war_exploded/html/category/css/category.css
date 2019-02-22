@@ -1,0 +1,31 @@
+/*Category Admin*/
+.list-category {
+    width: 100%;
+    height: auto;
+}
+
+.list-category li {
+    list-style: none;
+    line-height: 25px;
+    display: block;
+}
+
+.cate-title:hover {
+    color: #b90e01 !important;
+}
+
+#tags_tagsinput {
+    width: 100% !important;
+}
+
+.error {
+    color: #b90e01;
+}
+
+#table-cate tr td a.cate-title {
+    color: #2c4584;
+}
+
+#table-cate tr td a:hover {
+    color: #b90e01;
+}

@@ -1,0 +1,16 @@
+.new-action{
+    margin-bottom: 20px;
+    height: 50px;
+}
+
+.btn-search{
+    position: absolute;
+    top: 0px;
+    right: 6px;
+    padding: 8px 10px 10px 10px;
+}
+
+.frm-add-new{
+    width: 50%;
+    margin: 0 auto;
+}
